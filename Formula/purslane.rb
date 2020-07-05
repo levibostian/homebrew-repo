@@ -2,16 +2,16 @@
 class Purslane < Formula
   desc ""
   homepage "https://github.com/levibostian/purslane"
-  version "1.3.0"
+  version "1.4.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/levibostian/Purslane/releases/download/1.3.0/Purslane_1.3.0_Darwin_x86_64.tar.gz"
-    sha256 "ab1d8bad9218d44ed40fd1c6bfbc14305a480fe285ebefeee027e51e6931b50b"
+    url "https://github.com/levibostian/Purslane/releases/download/1.4.1/Purslane_1.4.1_Darwin_x86_64.tar.gz"
+    sha256 "0f2a49963e439aded17dc8cd4655364337f6c83c3600227c13e28bc81cc782e8"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/levibostian/Purslane/releases/download/1.3.0/Purslane_1.3.0_Linux_x86_64.tar.gz"
-      sha256 "3ec375c62356ffd567dc4233d168c00e22da56f1432150cd5ce5adf6522b9334"
+      url "https://github.com/levibostian/Purslane/releases/download/1.4.1/Purslane_1.4.1_Linux_x86_64.tar.gz"
+      sha256 "9bccfead3b4a8bf88a17ecc7be565a77a93f8d90adf259b2dae096bfad8dd068"
     end
   end
 
