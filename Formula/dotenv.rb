@@ -5,21 +5,21 @@
 class Dotenv < Formula
   desc ""
   homepage "https://github.com/levibostian/dotenv"
-  version "1.0.0-beta.2"
+  version "1.0.0"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/levibostian/dotenv/releases/download/1.0.0-beta.2/dotenv_1.0.0-beta.2_Darwin_x86_64.tar.gz"
-    sha256 "6baa9cf511e1694c2bee5f0b0a4d3b5049e4b796b61fa9db5183f8c9e394b4da"
+    url "https://github.com/levibostian/dotenv/releases/download/1.0.0/dotenv_1.0.0_Darwin_x86_64.tar.gz"
+    sha256 "9b3a4610d9ecfde225580eb20758167ad6bda129b6e755a73813b77217878b40"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/levibostian/dotenv/releases/download/1.0.0-beta.2/dotenv_1.0.0-beta.2_Linux_x86_64.tar.gz"
-    sha256 "50177531c62884b2042770ced1c39f4d377e281186b4b8a8a9080f40c4017526"
+    url "https://github.com/levibostian/dotenv/releases/download/1.0.0/dotenv_1.0.0_Linux_x86_64.tar.gz"
+    sha256 "6bad1b1709c30acfe37bdfefea14ff1469e2d0a84f7b2346dd7fcadbd28f269f"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/levibostian/dotenv/releases/download/1.0.0-beta.2/dotenv_1.0.0-beta.2_Linux_arm64.tar.gz"
-    sha256 "fe389fff935c0462a907554bcfcb2fbae15019a42ba59c67b58897cbea69ef0a"
+    url "https://github.com/levibostian/dotenv/releases/download/1.0.0/dotenv_1.0.0_Linux_arm64.tar.gz"
+    sha256 "2b83fba298cec830e67082c5b162bbbbee6fb14bcb9cced33799dc028b92e36e"
   end
 
   def install
