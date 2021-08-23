@@ -5,21 +5,26 @@
 class Dotenv < Formula
   desc ""
   homepage "https://github.com/levibostian/dotenv"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/levibostian/dotenv/releases/download/1.0.0/dotenv_1.0.0_Darwin_x86_64.tar.gz"
-    sha256 "9b3a4610d9ecfde225580eb20758167ad6bda129b6e755a73813b77217878b40"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/levibostian/dotenv/releases/download/1.1.0/dotenv_1.1.0_Darwin_x86_64.tar.gz"
+      sha256 "5988403f07b4f0aad09330b264d31f6d0f33e51c26627328a86ef4400ad21403"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/levibostian/dotenv/releases/download/1.0.0/dotenv_1.0.0_Linux_x86_64.tar.gz"
-    sha256 "6bad1b1709c30acfe37bdfefea14ff1469e2d0a84f7b2346dd7fcadbd28f269f"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/levibostian/dotenv/releases/download/1.0.0/dotenv_1.0.0_Linux_arm64.tar.gz"
-    sha256 "2b83fba298cec830e67082c5b162bbbbee6fb14bcb9cced33799dc028b92e36e"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/levibostian/dotenv/releases/download/1.1.0/dotenv_1.1.0_Linux_x86_64.tar.gz"
+      sha256 "652c392f1f975369c3307235e2fef49768dd1d92d03e7ebff884bbd1a6d8ea47"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/levibostian/dotenv/releases/download/1.1.0/dotenv_1.1.0_Linux_arm64.tar.gz"
+      sha256 "5d91d7f01600f6ff51f79a8b236947d759a6f9104500d804ee3329381f67ca17"
+    end
   end
 
   def install
